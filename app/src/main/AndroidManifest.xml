@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mascotasapplication">
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +12,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MascotasApplication">
         <activity android:name=".Detalle_Mascota"
-            android:parentActivityName=".MainActivity"/>
-        <!-- Soporte para versiones 4.0 o menos-->
+            android:parentActivityName=".MainActivity" /> <!-- Soporte para versiones 4.0 o menos -->
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity">
-        </meta-data>
-        <activity android:name=".Favorito"
-        android:parentActivityName=".MainActivity"/>
-        <!-- Soporte para versiones 4.0 o menos-->
+            android:value=".MainActivity" />
+        <activity
+            android:name=".Menu.Acercade"
+            android:parentActivityName=".MainActivity" /> <!-- Soporte para versiones 4.0 o menos -->
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity">
-        </meta-data>
+            android:value=".MainActivity" />
+
+        <activity
+            android:name=".Menu.Contacto"
+            android:parentActivityName=".MainActivity" /> <!-- Soporte para versiones 4.0 o menos -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" /> <!-- Soporte para versiones 4.0 o menos -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+
+        <activity
+            android:name=".Menu.Favorito"
+            android:parentActivityName=".MainActivity" /> <!-- Soporte para versiones 4.0 o menos -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

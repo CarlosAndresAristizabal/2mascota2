@@ -1,12 +1,15 @@
-package com.example.mascotasapplication;
+package com.example.mascotasapplication.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.app.Activity;
+
 import android.os.Bundle;
-import android.widget.TextView;
+
+import com.example.mascotasapplication.Adaptadores.MascotaAdaptador;
+import com.example.mascotasapplication.DataSet.Mascotas;
+import com.example.mascotasapplication.R;
 
 import java.util.ArrayList;
 
@@ -25,16 +28,18 @@ public class Favorito extends AppCompatActivity   {
         setSupportActionBar(miActionBar);
         getSupportActionBar().setTitle("Favoritos");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(listaMascotas != null) {
+            extras = getIntent().getExtras();
+            listaMascotas = (ArrayList<Mascotas>) extras.getSerializable("obj");
+            recicler = (RecyclerView) findViewById(R.id.rvMascotasFavorito);
+            recicler.setHasFixedSize(true);
+            RecyclerView.LayoutManager Manager = new LinearLayoutManager(this);
+            recicler.setLayoutManager(Manager);
+            MascotaAdaptador adapter = new MascotaAdaptador(listaMascotas, this);
+            recicler.setAdapter(adapter);
 
-        extras = getIntent().getExtras();
-        listaMascotas= (ArrayList<Mascotas>)extras.getSerializable("obj");
-        recicler = (RecyclerView) findViewById(R.id.rvMascotasFavorito);
-        recicler.setHasFixedSize(true);
-        RecyclerView.LayoutManager Manager = new LinearLayoutManager(this);
-        recicler.setLayoutManager(Manager);
-        MascotaAdaptador adapter = new MascotaAdaptador(listaMascotas, this);
-        recicler.setAdapter(adapter);
 
+        }
     }
 
 }

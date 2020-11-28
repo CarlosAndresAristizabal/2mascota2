@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardView"
@@ -56,95 +57,108 @@
                 card_view:layout_constraintTop_toTopOf="parent"
                 card_view:layout_constraintVertical_bias="0.0" />
 
+            <ImageView
+                android:id="@+id/iconodetalle"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/imgtodo"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toStartOf="@+id/imgFoto"
+                card_view:layout_constraintHorizontal_bias="0.258"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="0.095"
+                card_view:srcCompat="@drawable/icon_detall" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        card_view:cardBackgroundColor="@color/teal_200"
-        android:layout_margin="@dimen/top"
-        android:layout_marginBottom="8dp"
-        card_view:cardCornerRadius="8dp"
-        card_view:layout_constraintBottom_toBottomOf="@+id/imgIconHueso"
-        card_view:layout_constraintTop_toBottomOf="@+id/imgIconHueso">
-
-        <ImageView
-            android:id="@+id/imgIconHueso"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:contentDescription="@string/Imagen"
-            android:layout_gravity="start"
-            android:layout_margin="20dp"
-            android:src="@drawable/icons8_dog_bone_40"
-             />
-
-        <ImageView
-            android:id="@+id/huesoA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_margin="10dp"
-            android:contentDescription="@string/imgtodo"
-            android:src="@drawable/icons8_dog_bone_100" />
-
-        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical"
-            >
+            android:layout_gravity="center"
+            card_view:cardBackgroundColor="@color/teal_200"
+            android:layout_margin="@dimen/top"
+            android:layout_marginBottom="8dp"
+            card_view:cardCornerRadius="8dp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/imgIconHueso"
+            card_view:layout_constraintTop_toBottomOf="@+id/imgIconHueso">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/imgIconHueso"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:contentDescription="@string/Imagen"
+                android:layout_gravity="start"
+                android:layout_margin="20dp"
+                android:src="@drawable/icons8_dog_bone_40"
+                />
+
+            <ImageView
+                android:id="@+id/huesoA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/imgtodo"
+                android:src="@drawable/icons8_dog_bone_100" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_vertical">
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical">
 
 
-                <TextView
-                    android:id="@+id/tvNombreCV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_gravity="fill_vertical"
-                    android:layout_margin="8dp"
-                    android:layout_marginTop="4dp"
-                    android:paddingStart="50dp"
-                    android:paddingLeft="50dp"
-                    android:paddingEnd="0dp"
-                    android:paddingRight="0dp"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/nombre_perro"
-                    android:textStyle="bold"
-                    card_view:layout_constraintBottom_toBottomOf="parent"
-                    card_view:layout_constraintStart_toStartOf="parent"
-                    card_view:layout_constraintTop_toTopOf="parent"
-                    card_view:layout_constraintVertical_bias="0.5" />
+                    <TextView
+                        android:id="@+id/tvNombreCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="fill_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_marginTop="4dp"
+                        android:paddingStart="50dp"
+                        android:paddingLeft="50dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/nombre_perro"
+                        android:textStyle="bold"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent"
+                        card_view:layout_constraintVertical_bias="0.5" />
 
-                <TextView
-                    android:id="@+id/tvhuesoCV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_margin="8dp"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginLeft="50dp"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/numero_hueso"
-                    android:textStyle="bold"
-                    card_view:layout_constraintBottom_toBottomOf="parent"
-                    card_view:layout_constraintEnd_toEndOf="parent"
-                    card_view:layout_constraintHorizontal_bias="0.68"
-                    card_view:layout_constraintStart_toEndOf="@+id/tvNombreCV"
-                    card_view:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/tvhuesoCV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="8dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="50dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/numero_hueso"
+                        android:textStyle="bold"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintHorizontal_bias="0.68"
+                        card_view:layout_constraintStart_toEndOf="@+id/tvNombreCV"
+                        card_view:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
+            </LinearLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>

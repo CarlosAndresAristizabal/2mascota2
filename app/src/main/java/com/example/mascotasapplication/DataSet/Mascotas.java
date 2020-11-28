@@ -1,4 +1,4 @@
-package com.example.mascotasapplication;
+package com.example.mascotasapplication.DataSet;
 
 import java.io.Serializable;
 
@@ -8,19 +8,29 @@ public class Mascotas implements Serializable {
     private int foto;
     private boolean favorito;
 
-    public Mascotas(int foto, String nombre, String numerohueso, String descripcion, String edad) {
+    public Mascotas(){
+
+    }
+
+    public Mascotas (int foto, String numerohueso){
+        this.foto=foto;
+        this.numerohueso  = numerohueso;
+
+    }
+    public Mascotas(int foto, String nombre, String numerohueso, String descripcion, String edad ) {
         this.foto = foto;
         this.nombre = nombre;
         this.numerohueso = numerohueso;
         this.descripcion = descripcion;
         this.edad = edad;
 
+
     }
+
 
     public boolean isFavorito() {
         return favorito;
     }
-
     public void setFavorito(boolean favorito) {
         this.favorito = favorito;
     }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu.Contacto"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_dertalle"
+    >
+
+    <include android:id="@+id/actionbar"
+        layout="@layout/actionbar"
+        >
+    </include>
+
+    <Button
+        android:id="@+id/IngCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:hint="@string/ingresar_correo"
+
+        android:textColorHint="@color/white"
+
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Correo"
+            android:hint="@string/destinatario"
+            android:padding="12dp"
+            android:background="@drawable/bg_round"
+            android:inputType="text"
+            android:autofillHints="" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Asunto"
+            android:hint="@string/Asunto"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_round"
+            android:autofillHints=""
+            android:inputType="text" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/Mensaje"
+            android:hint="@string/Mensaje"
+            android:padding="12dp"
+            android:gravity="top"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_round"
+            android:autofillHints=""
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/Enviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/enviar_mensaje"
+            android:textColorHighlight="#FFFEFE"
+            android:textColorHint="#FFFFFF"
+            app:backgroundTint="@color/teal_700" />
+    </LinearLayout>
+</LinearLayout>

@@ -7,7 +7,7 @@
     <dimen name="activity_vertical_margin">16</dimen>
     <dimen name="corner_radius_cardview">8dp</dimen>
     <dimen name="margenbotton">731dp</dimen>
-    <dimen name="Elevacion_cardview">2dp</dimen>
+    <dimen name="Elevacion_cardview">4dp</dimen>
     <dimen name="elevation">4dp</dimen>
     <dimen name="tamIconBtnHueso">50dp</dimen>
     <dimen name="edad_descrip">18sp</dimen>

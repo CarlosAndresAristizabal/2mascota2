@@ -20,31 +20,41 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mascotasapplication.DataSet.Mascotas;
+import com.example.mascotasapplication.Menu.Acercade;
+import com.example.mascotasapplication.Menu.Contacto;
+import com.example.mascotasapplication.Menu.Favorito;
+import com.example.mascotasapplication.R;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Detalle_Mascota extends AppCompatActivity  implements Serializable {
-     TextView tvNombre,tvhueso, tvedad, tvdescripcion;
-     ImageView imgFoto;
-     Activity activity;
+    TextView tvNombre,tvhueso, tvedad, tvdescripcion;
+    ImageView imgFoto;
 
-     // actionbar menu
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_activity_menu,menu);
+        getMenuInflater().inflate(R.menu.main_activity_menu, menu);
         return true;
     }
-    //icono estrella favorito
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int selec = item.getItemId();
-        if(selec == R.id.action_favorite){
-            Intent favorito = new Intent(activity, Favorito.class);
-            activity.startActivity(favorito);
+        switch (item.getItemId()) {
+            case R.id.Contacto:
+                Intent Contacto = new Intent(this, com.example.mascotasapplication.Menu.Contacto.class);
+                startActivity(Contacto);
+                break;
+            case R.id.Acercade:
+                Intent Acerca = new Intent(this, Acercade.class);
+                startActivity(Acerca);
+                break;
         }
+
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +82,8 @@ public class Detalle_Mascota extends AppCompatActivity  implements Serializable 
         tvdescripcion.setText(descripcion);
         tvedad.setText(edad);
         tvhueso.setText(huesos);
+
+
 
     }
 

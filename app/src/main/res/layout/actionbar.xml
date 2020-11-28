@@ -11,7 +11,7 @@
         android:orientation="vertical"
         tools:context=".MainActivity"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight"
+    tools:targetApi="lollipop" />
 
 
